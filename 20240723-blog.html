@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintainability | Richard Foster - Dev Blog</title>
+  <link rel="stylesheet" href="style-blog-entry.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <!-- Hammersmith One for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Changa+One:ital@0;1&family=Hammersmith+One&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Paytone+One&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  
+  <!-- NTR for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Changa+One:ital@0;1&family=Hammersmith+One&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=NTR&family=Outfit:wght@100..900&family=Paytone+One&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="header">
+    <a href="index.html">
+        <div class="flexHeader">
+            <img src="assets/left-arrow.png" height="30px">
+            <p>home</p>
+        </div>
+    </a>
+</header>
+
+<div class="blogEntry">
+    <section>
+        <h2>Maintainability</h2>
+        <h3>23 July 2024</h3>
+
+        <p>Even as a newbie, one of the main things I want to get good at is writing clean, simple code.</p>
+
+        <p>One thing I have noticed when inspecting websites I like is that lots of them define their colour scheme at the start of their CSS document, and then refer to 
+            them by name throughout the style sheet.</p>
+
+        <p>This is such a great idea because it means that if you suddenly have a change of heart and want to completely change your colour scheme, you can change the colour 
+            values in one place, hit save, and the changes are applied to everywhere. What a time saver!</p>
+
+        <p>So that's what I've done with this blog. I have started my style.css as follows:</p>
+
+        <div class="codeBlock">
+            <code>:root {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;--col-brand: #878ca5;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;--col-light: #fff8e8;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;--col-dark: #41496d;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;--col-light-accent: #ffd369;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;--col-dark-accent: #9a64da;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;--col-dark-accent-2: #6a7eda;<br>
+            }
+            </code>
+        </div>
+
+        <p>Even as I write this entry, I'm thinking of changing my original colour scheme: I was going for 'sleek and professional,' but instead it feels a bit too 
+            much like '70 year old man's first website', so I'll definitely be taking advantage of this new trick!</p>
+    </section>
+</div>
+
+<footer>
+  <div class="divFooter">
+    <div class="divFooterCopyright">
+      <p>© Richard Foster 2024</p>
+    </div>
+  
+    <div class="divFooterIcons">
+      <a href="mailto:richardfoster89@gmail.com" target="_blank">
+        <img src="assets/email.png" height="40px">
+      </a>
+      <a href="https://github.com/richardfoster89" target="_blank">
+        <img src="assets/github-black.png" height="40px">
+      </a>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

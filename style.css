@@ -1,0 +1,149 @@
+:root {
+    --col-white: #ffffff;
+    --col-grey: #e5e5e5;
+    --col-yellow: #fca311;
+    --col-darkblue: #14213d;
+    --col-black: #000000;
+} 
+
+html,
+body {
+  font-size: 1.05em;
+  font-family: "NTR";
+  margin: 0;
+} /* user's default. use rem to set other fonts relative to it */
+
+body {
+    background-color: var(--col-white);
+    color: var(--col-darkblue);
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+} /* make box sizing more predictable! */
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: "Hammersmith One";
+}
+
+/* header */
+
+header {
+    background-color: var(--col-darkblue);
+    color: var(--col-white);
+}
+
+.header {
+    padding-left: 20px;
+}
+
+.header p {
+    margin-top: 0;
+}
+
+.flexTop {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 50px;
+    align-items: center;
+}
+
+.flexNavTop {
+    background-color: var(--col-grey);
+    color: var(--col-black);
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+/* main */
+
+.gridContainerMain {
+    display: grid;
+    grid-template-columns: 0.5fr 5fr 2fr;
+    gap: 1rem;
+    min-height: calc(100vh - 218.167px - 72.2667px);
+    padding-top: 20px;
+    font-size: 1.1em;
+
+    grid-template-areas:
+        "whiteSpace blogs archive";
+}
+
+.gridContainerMain section {
+    grid-area: blogs;
+}
+
+.blogs {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.blogLink {
+    max-width: 200px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+.archive {
+    grid-area: archive;
+}
+
+
+/* footer */
+
+footer {
+    background-color: var(--col-yellow);
+    color: var(--col-black);
+    padding-left: 20px;
+}
+
+.divFooter {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.divFooterCopyright {
+    margin-right: auto;
+    padding-right: 50px;
+}
+
+.divFooterIcons {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    padding-right: 10px;
+}
+
+.divFooterIcons a {
+    transition: .5s;
+    z-index: 3;
+    height: 40px;
+}
+
+.divFooterIcons a:hover {
+    transform: scale(1.2);
+}
+
+
+/* media queries */
+
+@media (max-width: 800px) {
+    .archive {
+        display: none;
+    }
+}

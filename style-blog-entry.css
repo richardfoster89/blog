@@ -1,0 +1,134 @@
+:root {
+    --col-white: #ffffff;
+    --col-grey: #e5e5e5;
+    --col-yellow: #fca311;
+    --col-darkblue: #14213d;
+    --col-black: #000000;
+} 
+
+html,
+body {
+  font-family: "NTR";
+  font-size: 1.05rem;
+  margin: 0;
+} /* user's default. use rem to set other fonts relative to it */
+
+body {
+    background-color: var(--col-white);
+    color: var(--col-darkblue);
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+} /* make box sizing more predictable! */
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: "Hammersmith One";
+}
+
+/* header */
+
+header {
+    background-color: var(--col-darkblue);
+    color: var(--col-grey);
+}
+
+.header {
+    padding-left: 20px;
+}
+
+.flexHeader {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+/* main */
+
+h2,
+h3 {
+    margin: 0;
+}
+
+h3 {
+    border-bottom: 1px solid var(--col-darkblue);
+    margin-bottom: 30px;
+}
+
+code {
+    font-size: 0.9em;
+}
+
+.blogEntry {
+    margin-left: 5%;
+    margin-right: 15%;
+    min-height: calc(100vh - 72.2667px - 72.2667px);
+    max-width: 800px;
+    padding-top: 35px;
+    padding-bottom: 40px;
+    line-height: 1.7;
+}
+
+.blogEntry p {
+    font-size: 1.05em;
+}
+
+.codeBlock {
+    margin-left: 15%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--col-yellow);
+    color: var(--col-black);
+    padding-left: 20px;
+}
+
+.divFooter {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.divFooterCopyright {
+    margin-right: auto;
+    padding-right: 50px;
+}
+
+.divFooterIcons {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    padding-right: 10px;
+}
+
+.divFooterIcons a {
+    transition: .5s;
+    z-index: 3;
+    height: 40px;
+}
+
+.divFooterIcons a:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 500px) {
+    code {
+        font-size: 0.8em;
+    }
+}

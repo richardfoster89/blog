@@ -46,6 +46,11 @@ header {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+}
+
+.flexHeader a {
+    display: flex;
+    align-items: center;
     gap: 15px;
 }
 

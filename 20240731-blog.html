@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workflow | Richard Foster - Dev Blog</title>
+  <link rel="stylesheet" href="./style-blog-entry.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Bakbak One for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+  <!-- NTR for body -->
+  <link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="flexHeader">
+    <a href="./index.html">
+      <img src="./assets/left-arrow.png" height="30px">
+      <p>home</p>
+    </a>
+  </div>
+</header>
+
+<div class="blogEntry">
+    <section>
+        <h2>Git good</h2>
+        <h3>31 July 2024</h3>
+
+        <p>So I decided to learn Git.</p>
+
+        <p>I remember first reading about Git a few months ago and thinking, 'My god this sounds complicated.' I chalked it up
+          to not being clever enough to understand it, and moved on with my life.</p>
+        
+        <p>Then two weeks ago I made some updates to my blog design and completely screwed things up. I had no kind of version control and 
+          no idea how to get back to where I'd been pre-screw up, so I was left with no choice but to start all over again. Which was 
+          neither a fun nor  effective use of time.</p>
+
+        <p>Therefore, I started reading up on Git again. A quick DuckDuckGo (I avoid using anything Google if I can help it - on an unrelated note, 
+          please don't check my HTML heads) brought up lots of promising results:</p>
+
+        <ul>
+          <li>Hundreds of people asking the same question - <em>wtf is Git and why can't I understand it? P.S. wtf is Github and are they the same 
+            thing?</em></li>
+          <li>People saying things like, <em>'My first impression of Git was I guess this is simple enough, which quickly turned into Wow this is painful.'</em></li>
+          <li>There's literally a website called <a href="https://ohshitgit.com/"><strong>Oh Shit, Git!?!</strong></a> It begins as so: <em> 'Git is hard: screwing 
+            up is easy, and figuring out how to fix your mistakes is fucking impossible.' </em> Which I'm already learning is absolutely true, but it's 
+            also not especially promising for a newbie to read (at least it's honest?)</li>
+        </ul>
+
+        <p>Needless to say, I wasn't exactly enthused at the prospect of making a start with Git.</p>
+
+        <p>But I managed to find a pretty good guide from <strong>freeCodeCamp</strong> called <a href="https://www.freecodecamp.org/news/guide-to-git-github-for-beginners-and-experienced-devs/" 
+          target="_blank">How to Use Git and GitHub – a Guide for Beginners and Experienced Developers</a>, and this got me up and running fairly quickly (I will add that I 
+          found lots of tutorials online, but most of them were not very clear).</p>
+
+        <p>The good news is that I can now use Git! I'm aware that if I was ever able to get a dev job somewhere, I'd need to know more that this, but 
+          I've basically established that I only really need to use a few simple commands to do what I want:</p>
+
+        <code>
+          <ul>
+            <li>git init [projectName]</li>
+            <li>git remote add origin [GithubRepoURL]</li>
+            <li>git pull origin main</li>
+            <li>code [fileName.extension]</li>
+            <li>git status</li>
+            <li>git add .</li>
+            <li>git commit -m [message]</li>
+            <li>git push origin main</li>
+            </ul>
+        </code>
+
+        <p>And I must say, Git is actually really cool! Using some of the above commands, I can connect my local files to a 'remote repo' (i.e. one of my online 
+          Github projects), push/pull from my online Github projects (i.e. send updated code/grab up to date code from Github). And it means I've got 
+          version histories on Github so I can revert to previous changes if I mess something up.</p>
+
+        <p>Git becomes even more powerful if you're part of a professional dev team: my understanding is that you can have multiple devs working on the 
+          same code base at the same time, but they've each got their own local 'branch' of the code. They can all then 'push' their changes whenever 
+          they're ready and all the separate changes will be merged with the main code base. Which is quite nifty.</p>
+
+        <p>So I'm actually really glad I've now learnt the basics of Git (and Github), and I would encourage any other aspiring devs to do the same...</p>
+
+        <p>...just don't feel stupid if you take a first glance and think it looks confusing. Because it is.</p>
+    </section>
+</div>
+
+<footer>
+  <div class="divFooter">
+    <div class="divFooterCopyright">
+      <p>© Richard Foster 2024</p>
+    </div>
+  
+    <div class="divFooterIcons">
+      <a href="mailto:richardfoster89@gmail.com" target="_blank">
+        <img src="./assets/email.png" height="40px">
+      </a>
+      <a href="https://github.com/richardfoster89" target="_blank">
+        <img src="./assets/github-black.png" height="40px">
+      </a>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

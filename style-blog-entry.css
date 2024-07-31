@@ -41,6 +41,8 @@ header {
 
 .header {
     padding-left: 20px;
+    position: sticky;
+    top: 0px;
 }
 
 .flexHeader {

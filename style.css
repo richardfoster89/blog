@@ -28,7 +28,7 @@ body {
 
 h1, h2, h3,
 h4, h5, h6 {
-    font-family: "Hammersmith One";
+    font-family: "Bakbak One";
 }
 
 /* header */
@@ -148,7 +148,7 @@ footer {
 @media (max-width: 800px) {
     .gridContainerMain {
         display: grid;
-        grid-template-columns: 0.5fr 5fr;
+        grid-template-columns: 0.5fr 5fr 0.5fr;
         gap: 1rem;
         min-height: calc(100vh - 218.167px - 72.2667px);
         padding-top: 20px;
@@ -157,6 +157,10 @@ footer {
         font-size: 1.1em;
     
         grid-template-areas:
-            "whiteSpaceLeft blogs";
+            "whiteSpaceLeft blogs whitespaceRight";
+    }
+
+    .archive {
+        display: none;
     }
 }

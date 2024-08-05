@@ -58,8 +58,18 @@ header {
     background-color: var(--col-grey);
     color: var(--col-black);
     display: flex;
-    gap: 20px;
     padding-left: 20px;
+}
+
+.flexNavTop p {
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.flexNavTop p:hover {
+    background-color: var(--col-yellow);
+    color: var(--col-white);
+    cursor: pointer;
 }
 
 /* main */

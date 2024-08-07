@@ -101,6 +101,21 @@ code li {
     padding-left: 1em;
 }
 
+.centredDiv {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.centredDiv img {
+    border: 1px solid var(--col-black);
+    max-width: 100%;
+}
+
+.smallPrint {
+    font-size: 0.9em;
+    margin: 30px 50px;
+}
 
 
 /* footer */

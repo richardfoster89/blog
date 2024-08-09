@@ -30,6 +30,12 @@ h1, h2, h3,
 h4, h5, h6 {
     font-family: "Bakbak One";
     letter-spacing: 0.04em;
+
+}
+
+h3, h4,
+h5, h6 {
+    margin-bottom: 0px;
 }
 
 /* header */
@@ -93,8 +99,12 @@ header {
     grid-area: blogs;
 }
 
+.aboutMain {
+    line-height: 1.5em;
+}
+
 .aboutMain p {
-    padding-bottom: 0px;
+    margin-top: 5px;
 }
 
 .aboutMain a {

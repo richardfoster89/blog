@@ -1,0 +1,226 @@
+:root {
+    --col-white: #ffffff;
+    --col-grey: #e5e5e5;
+    --col-yellow: #fca311;
+    --col-darkblue: #14213d;
+    --col-black: #000000;
+} 
+
+html,
+body {
+  font-size: 1.05em;
+  font-family: "NTR";
+  margin: 0;
+} /* user's default. use rem to set other fonts relative to it */
+
+body {
+    background-color: var(--col-white);
+    color: var(--col-darkblue);
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+} /* make box sizing more predictable! */
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: "Bakbak One";
+    letter-spacing: 0.04em;
+}
+
+/* header */
+
+header {
+    background-color: var(--col-darkblue);
+    color: var(--col-white);
+}
+
+.header {
+    padding-left: 20px;
+}
+
+.header p {
+    margin-top: 0;
+}
+
+.flexTop {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.flexNavTop {
+    background-color: var(--col-grey);
+    color: var(--col-black);
+    display: flex;
+    padding-left: 20px;
+}
+
+.flexNavTop p {
+    padding: 10px 20px;
+    margin: 0;
+    transition: all 0.5s;
+}
+
+.flexNavTop p:hover {
+    background-color: var(--col-yellow);
+    color: var(--col-white);
+    cursor: pointer;
+}
+
+/* main */
+
+.gridContainerMain {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr 1fr;
+    gap: 3rem;
+    min-height: calc(100vh - 207.9px - 72.2667px);
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 1.1em;
+
+    grid-template-areas:
+        "whiteSpaceLeft blogs archive whiteSpaceRight";
+}
+
+.gridContainerMain section {
+    grid-area: blogs;
+}
+
+.aboutMain p {
+    padding-bottom: 0px;
+}
+
+.aboutMain a {
+    font-weight: bold;
+}
+
+.blogs {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.blogLink {
+    border-bottom: 1px solid var(--col-darkblue);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+.archive {
+    grid-area: archive;
+    display: flex;
+    flex-flow: column wrap;
+    
+    padding: 25px 30px;
+    border-radius: 5px;
+    max-width: 350px;
+}
+
+.archive > * {
+    flex: 1;
+}
+
+.details-h2 {
+    font-family: "Bakbak One";
+    font-size: 1.3em;
+    padding-bottom: 15px;
+}
+
+.archive details details {
+    background-color: var(--col-grey);
+    border-radius: 3px;
+    padding-left: 20px;
+    padding-right: 50px;
+}
+
+.archive summary {
+    margin-bottom: 0px;
+}
+
+.archive ul {
+    margin-top: 0px;
+    padding-bottom: 15px;
+}
+
+.archiveMonth {
+    margin-bottom: 10px;
+}
+
+.archiveMonthList {
+    font-size: 0.8em;
+}
+
+
+/* footer */
+
+footer {
+    background-color: var(--col-yellow);
+    color: var(--col-black);
+    padding-left: 20px;
+}
+
+.divFooter {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.divFooterCopyright {
+    margin-right: auto;
+    padding-right: 50px;
+}
+
+.divFooterIcons {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    padding-right: 10px;
+}
+
+.divFooterIcons a {
+    transition: .5s;
+    z-index: 3;
+    height: 40px;
+}
+
+.divFooterIcons a:hover {
+    transform: scale(1.2);
+}
+
+
+/* media queries */
+
+@media (max-width: 800px) {
+    .gridContainerMain {
+        display: grid;
+        grid-template-columns: 0.5fr 5fr 0.5fr;
+        gap: 1rem;
+        min-height: calc(100vh - 218.167px - 72.2667px);
+        padding-top: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 1.1em;
+    
+        grid-template-areas:
+            "whiteSpaceLeft blogs whitespaceRight";
+    }
+
+    .archive {
+        display: none;
+    }
+}

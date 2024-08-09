@@ -73,6 +73,11 @@ header {
     cursor: pointer;
 }
 
+.currentPage {
+    background-color: var(--col-yellow);
+    color: var(--col-black);
+}
+
 /* main */
 
 .gridContainerMain {

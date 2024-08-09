@@ -79,6 +79,11 @@ header {
     cursor: pointer;
 }
 
+.currentPage {
+    background-color: var(--col-yellow);
+    color: var(--col-black);
+}
+
 /* main */
 
 .gridContainerMain {
@@ -133,6 +138,32 @@ a:visited {
 
 .archive {
     grid-area: archive;
+}
+
+.skillsTable {
+    border: 1px solid var(--col-black);
+    border-collapse: collapse;
+}
+
+.skillsTable th, td {
+    border: 1px solid var(--col-black);
+    padding: 5px 10px;
+}
+
+.skillsTable th {
+    background-color: var(--col-grey);
+}
+
+.skillsTable .check {
+    text-align: center;
+}
+
+.skillsTable .tableNotes {
+    font-size: 0.8em;
+}
+
+.skillsTable tr:hover {
+    background-color: var(--col-yellow);
 }
 
 
@@ -192,5 +223,15 @@ footer {
 
     .archive {
         display: none;
+    }
+
+    .skillsTable {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 500px) {
+    .skillsTable {
+        font-size: 0.7em;
     }
 }

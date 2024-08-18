@@ -6,26 +6,37 @@ const colYellow = style.getPropertyValue("--col-yellow");
 const colDarkBlue = style.getPropertyValue("--col-darkblue");
 const colBlack = style.getPropertyValue("--col-black");
 
+let darkModeOn = false;
+
 const lightModeButton = document.getElementById("lightModeButton");
 const darkModeButton = document.getElementById("darkModeButton");
 const body = document.querySelector("body");
 const footer = document.querySelector("footer");
-
-//darkModeButton.addEventListener("click", function () {
-//    if ( body.style.backgroundColor === '#ffffff' ) {
-//        body.style.backgroundColor = '#14213d';
-//    } else {
-//        body.style.backgroundColor = '#ffffff';
-//    }
-//})
+const blogLink = document.getElementsByClassName("blogLink");
+//const skillsTable = document.querySelector(".skillsTable")
 
 darkModeButton.addEventListener("click", function () {
-    body.style.backgroundColor = colDarkBlue;
-    body.style.color = colWhite;
-    footer.style.backgroundColor = colGrey;
-})
+    if ( darkModeOn === false ) {
+        body.style.backgroundColor = colDarkBlue;
+        body.style.color = colWhite;
+        footer.style.backgroundColor = colGrey;
+        
+       
 
-lightModeButton.addEventListener("click", function () {
-    body.style.backgroundColor = colWhite;
-    body.style.color = colDarkBlue;
+        for ( i = 0; i < blogLink.length; i++ ) {
+            blogLink[i].style.borderColor = colWhite;
+        }
+
+        darkModeButton.innerText = "☀";
+        darkModeOn = true;
+    } else if ( darkModeOn === true ) {
+        body.style.backgroundColor = colWhite;
+        body.style.color = colDarkBlue;
+        for ( i = 0; i < blogLink.length; i++ ) {
+            blogLink[i].style.borderColor = colDarkBlue;
+        }
+        footer.style.backgroundColor = colYellow;
+        darkModeButton.innerText = "☾";
+        darkModeOn = false;
+    }
 })

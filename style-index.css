@@ -114,7 +114,7 @@ header {
     padding-bottom: 50px;
 }
 
-#blogLink {
+.blogLink {
     border-bottom: 1px solid var(--col-darkblue);
 }
 
